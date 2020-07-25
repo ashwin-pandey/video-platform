@@ -10,18 +10,24 @@ import { AppComponent } from './app.component';
 
 /** Routing import */
 import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './videos/home/home.component';
+import { HomeComponent } from './movies/home/home.component';
+import { HeaderComponent } from './partials/header/header.component';
+import { FooterComponent } from './partials/footer/footer.component';
+import { MoviesModule } from './movies/movies.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MoviesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

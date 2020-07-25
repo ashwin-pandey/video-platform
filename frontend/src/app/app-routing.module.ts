@@ -2,13 +2,20 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './videos/home/home.component';
+import { HomeComponent } from './movies/home/home.component';
 
 /**
  * All the parent routes for the application
  */
 const routes: Routes = [
-  { path: '', component: HomeComponent }
+  {
+    path: '', redirectTo: '/movies', pathMatch: 'full'
+  },
+  { 
+    path: 'movies',
+    loadChildren: () => import('./movies/movies.module').then(m => m.MoviesModule) 
+  },
+  { path: '**', redirectTo: '/movies', pathMatch: 'full' }
 ];
 
 @NgModule({
