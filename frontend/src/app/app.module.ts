@@ -5,11 +5,11 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-/** Component imports */
-import { AppComponent } from './app.component';
-
 /** Routing import */
 import { AppRoutingModule } from './app-routing.module';
+
+/** Component imports */
+import { AppComponent } from './app.component';
 import { HomeComponent } from './movies/home/home.component';
 import { HeaderComponent } from './partials/header/header.component';
 import { FooterComponent } from './partials/footer/footer.component';
